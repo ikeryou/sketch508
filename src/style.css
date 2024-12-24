@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.js-svh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100svh;
+  pointer-events: none;
+}
+
+.js-lvh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: max(100dvh, 100lvh);
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1;
+}
+
+html, body {
+  background-color: #FFF;
+}
+
+.js-tgSVG {
+  position: fixed;
+  top: 0;
+  left: -9999px;
+  z-index: 9999;
+}
+
+.s-gpu {
+  will-change: transform;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+.l-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 120px 40px;
+}
+
+.l-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.l-main-item {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 14px;;
+}
+
+.l-main-item span {
+  text-decoration: underline;
+}
+
+.l-main-item span.-segment-dummy {
+  opacity: 0.001;
+}
+
+.l-main-item span.-segment {
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+
+.s-none {
+  display: none;
+}
+
+
+.l-height {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 300vh;
+}
+
+.l-debug {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  background-color: #000;
+  color: #FFF;
+  font-size: 18px;
+  display: none;
+}
+.l-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 40px;
+  color: #fff;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 9999;
+}
+.l-info p {
+  font-size: 14px;
+  color: inherit;
+  background-color: #000;
+  padding: 5px 20px 5px 20px;
+}
+.l-info a {
+  color: inherit;
+  text-decoration: line-through;
+}
+.l-info a:hover {
+  text-decoration: none;
+}
+
+.l-btn {
+  position: fixed;
+  top: auto;
+  bottom: 0px;
+  left: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+@media screen and (max-width:768px) {
+  .l-info {
+    justify-content: flex-start;
+    margin: 20px;
+    height: auto;
+  }
+  .l-info p {
+    font-size: 10px;
+  }
+
+  .l-wrapper {
+    padding: 100px 20px;
+  }
+
+  .l-main-item {
+    white-space: nowrap;
+    font-size: 18px;
+    letter-spacing: -0.09em;
+    /* width: 60%; */
+  }
+}
